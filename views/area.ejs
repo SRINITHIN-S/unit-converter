@@ -1,0 +1,33 @@
+<%- include('header') %>
+    <div class="container-fluid converter">
+        <form action="/area" method="post">
+            <div class="from-section">
+                <label for="from_units" class="me-3">From:</label>
+                <select name="from_unit" class="me-2" id="units">
+                    <option value="m2" <% if (from_unit === 'm2') { %> selected <% } %>>Square Meter</option>
+                    <option value="km2" <% if (from_unit === 'km2') { %> selected <% } %>>Square Kilometer</option>
+                    <option value="cm2" <% if (from_unit === 'cm2') { %> selected <% } %>>Square Centimeter</option>
+                    <option value="mm2" <% if (from_unit === 'mm2') { %> selected <% } %>>Square Millimeter</option>
+                </select>
+                <input type="number" name="from_value" placeholder="Enter the Value"><br>
+            </div>
+            <div class="to-section">
+                <label for="to_unit" class="to_label">To:</label>
+                <select name="to_unit" class="me-2" id="unit">
+                    <option value="m2"  <% if (to_unit === 'm2') { %> selected <% } %>>Square Meter</option>
+                    <option value="km2"  <% if (to_unit === 'km2') { %> selected <% } %>>Square Kilometer</option>
+                    <option value="cm2"  <% if (to_unit === 'cm2') { %> selected <% } %>>Square Centimeter</option>
+                    <option value="mm2"  <% if (to_unit === 'mm2') { %> selected <% } %>>Square Millimeter</option>
+                </select>
+                <input type="text" name="result" value=" <%= result %> " />
+                <br>
+            </div>
+            <input type="submit" value="calculate">
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

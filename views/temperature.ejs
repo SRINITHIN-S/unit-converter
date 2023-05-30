@@ -1,0 +1,31 @@
+<%- include('header') %>
+    <div class="container-fluid converter">
+        <form action="/temperature" method="post">
+            <div class="from-section">
+                <label for="from_units" class="me-3">From:</label>
+                <select name="from_unit" class="me-2" id="units">
+                    <option value="C"  <% if (from_unit === 'C') { %> selected <% } %> >Celsius</option>
+                    <option value="F"  <% if (from_unit === 'F') { %> selected <% } %> >Fahrenheit</option>
+                    <option value="K"  <% if (from_unit === 'K') { %> selected <% } %> >Kelvin</option>
+                </select>
+                <input type="number" name="from_value" placeholder="Enter the Value"><br>
+            </div>
+            <div class="to-section">
+                <label for="to_unit" class="to_label">To:</label>
+                <select name="to_unit" class="me-2" id="unit">
+                    <option value="C" <% if (to_unit === 'C') { %> selected <% } %>>Celsius</option>
+                    <option value="F" <% if (to_unit === 'F') { %> selected <% } %>>Fahrenheit</option>
+                    <option value="K" <% if (to_unit === 'K') { %> selected <% } %>>Kelvin</option>
+                </select>
+                <input type="text" name="result" value=" <%= result %> " />
+                <br>
+            </div>
+            <input type="submit" value="calculate">
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+.head{
+    background-color: greenyellow;
+    padding:10px;
+}
+
+.converter{
+    background-color: antiquewhite;
+    margin: 5rem;
+    width: 500px;
+    padding: 2rem;
+}
+.to_label {
+    margin-right: 36px;
+
+}
+
+.from-section{
+    margin-bottom: 15px;
+}
+
+.to-section{
+    margin-bottom: 15px;
+}

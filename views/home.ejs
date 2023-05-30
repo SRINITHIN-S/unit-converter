@@ -1,0 +1,34 @@
+<%- include('header') %>
+
+    <div class="container-fluid converter">
+        <form action="/home" method="post">
+            <div class="from-section">
+                <label for="from_units" class="me-3">From:</label>
+                <select name="from_unit" class="me-2" id="units">
+                    <option value="km" <% if (from_unit === 'km') { %> selected <% } %>>Kilometer</option>
+                    <option value="m" <% if (from_unit === 'm') { %> selected <% } %>>Meter</option>
+                    <option value="cm" <% if (from_unit === 'cm') { %> selected <% } %>>Centimeter</option>
+                    <option value="mm" <% if (from_unit === 'mm') { %> selected <% } %>>Millimeter</option>
+                </select>
+                <input type="number" name="from_value" placeholder="Enter the Value"><br>
+            </div>
+            <div class="to-section">
+                <label for="to_unit" class="to_label">To:</label>
+                <select name="to_unit" class="me-2" id="unit">
+                    <option value="km" <% if (to_unit === 'km') { %> selected <% } %>>Kilometer</option>
+                    <option value="m" <% if (to_unit === 'm') { %> selected <% } %>>Meter</option>
+                    <option value="cm" <% if (to_unit === 'cm') { %> selected <% } %>>Centimeter</option>
+                    <option value="mm" <% if (to_unit === 'mm') { %> selected <% } %>>Millimeter</option>
+                </select>
+                <input type="text" name="result" value=" <%= result %> " />
+                <br>
+            </div>
+            <input type="submit" value="calculate">
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

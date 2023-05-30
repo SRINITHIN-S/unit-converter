@@ -1,0 +1,43 @@
+<%- include('header') %>
+    <div class="container-fluid converter">
+        <form action="/time" method="post">
+            <div class="from-section">
+                <label for="from_units" class="me-3">From:</label>
+                <select name="from_unit" class="me-2" id="units">
+                    <option value="ns"  <% if (from_unit === 'ns') { %> selected <% } %> >Nanoseconds</option>
+                    <option value="mu"  <% if (from_unit === 'mu') { %> selected <% } %> >Milliseconds</option>
+                    <option value="ms"  <% if (from_unit === 'ms') { %> selected <% } %> >Microseconds</option>
+                    <option value="s"  <% if (from_unit === 's') { %> selected <% } %> >Seconds</option>
+                    <option value="min"  <% if (from_unit === 'min') { %> selected <% } %> >Minutes</option>
+                    <option value="h"  <% if (from_unit === 'h') { %> selected <% } %> >Days</option>
+                    <option value="week"  <% if (from_unit === 'week') { %> selected <% } %> >Weeks</option>
+                    <option value="month"  <% if (from_unit === 'month') { %> selected <% } %> >Months</option>
+                    <option value="year"  <% if (from_unit === 'year') { %> selected <% } %> >Years</option>
+                </select>
+                <input type="number" name="from_value" placeholder="Enter the Value"><br>
+            </div>
+            <div class="to-section">
+                <label for="to_unit" class="to_label">To:</label>
+                <select name="to_unit" class="me-2" id="unit">
+                    <option value="ns"  <% if (to_unit === 'ns') { %> selected <% } %> >Nanoseconds</option>
+                    <option value="mu"  <% if (to_unit === 'mu') { %> selected <% } %> >Milliseconds</option>
+                    <option value="ms"  <% if (to_unit === 'ms') { %> selected <% } %> >Microseconds</option>
+                    <option value="s"  <% if (to_unit === 's') { %> selected <% } %> >Seconds</option>
+                    <option value="min"  <% if (to_unit === 'min') { %> selected <% } %> >Minutes</option>
+                    <option value="h"  <% if (to_unit === 'h') { %> selected <% } %> >Days</option>
+                    <option value="week"  <% if (to_unit === 'week') { %> selected <% } %> >Weeks</option>
+                    <option value="month"  <% if (to_unit === 'month') { %> selected <% } %> >Months</option>
+                    <option value="year"  <% if (to_unit === 'year') { %> selected <% } %> >Years</option>
+                </select>
+                <input type="text" name="result" value=" <%= result %> " />
+                <br>
+            </div>
+            <input type="submit" value="calculate">
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
